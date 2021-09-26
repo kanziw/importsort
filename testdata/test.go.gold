@@ -1,0 +1,49 @@
+// Copyright (c) 2017 Arista Networks, Inc.
+// Use of this source code is governed by the Apache License 2.0
+// that can be found in the COPYING file.
+
+package main
+
+import (
+	"bytes"
+	"foobar"
+	"foobar/baz"
+	"strings"
+
+	"cvshub.com/foobar/import"
+)
+
+import (
+	"bytes"
+	"foobar"
+	"foobar/baz"
+	"strings"
+
+	"cvshub.com/other/import"
+
+	"cvshub.com/foobar/import"
+)
+
+func foobar() {}
+
+import (
+	z "bytes"
+	"foobar"
+	_ "foobar/baz" // in line comment
+	. "foobar/qux" // in line comment
+	"strings"
+
+	"cvshub.com/foobar/import"
+)
+import (
+	"bytes"
+
+	"cvshub.com/foobar/import"
+)
+import (
+	"cvshub.com/foobar/import"
+)
+
+func main() {
+	foobar()
+}
